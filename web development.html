@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development - Tanushri's FabLab Portfolio</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .module-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .back-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            transition: all 0.3s;
+        }
+        
+        .back-link:hover {
+            color: var(--primary-hover);
+            transform: translateX(-3px);
+        }
+        
+        .back-link i {
+            margin-right: 8px;
+        }
+        
+        .module-content {
+            color: var(--text-muted);
+        }
+        
+        .module-content h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin: 30px 0 20px;
+        }
+        
+        .module-content h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin: 25px 0 15px;
+        }
+        
+        .skill-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .skill-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .skill-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .project-card {
+            background: rgba(40, 40, 55, 0.7);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: rgba(243, 156, 18, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h1>Tanushri's Portfolio</h1>
+                <p>FabLab Journey</p>
+                <button id="sidebar-toggle" class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-content">
+                <div class="sidebar-group">
+                    <h3 class="sidebar-group-label">Navigation</h3>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item">
+                            <a href="./index.html" class="sidebar-menu-link">
+                                <i class="fas fa-user"></i>
+                                <span>About Me</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./index.html#fablab-experience" class="sidebar-menu-link">
+                                <i class="fas fa-layer-group"></i>
+                                <span>FabLab Experience</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-group">
+                    <h3 class="sidebar-group-label">FabLab Modules</h3>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item">
+                            <a href="./web development.html" class="sidebar-menu-link active">
+                                <i class="fas fa-code"></i>
+                                <span>Web Development</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="cad.html" class="sidebar-menu-link">
+                                <i class="fas fa-drafting-compass"></i>
+                                <span>Computer Aided Designing</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="cac.html" class="sidebar-menu-link">
+                                <i class="fas fa-cut"></i>
+                                <span>Computer Aided Cutting</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="3d-printing.html" class="sidebar-menu-link">
+                                <i class="fas fa-cube"></i>
+                                <span>3D Printing & Designing</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="pcb-design.html" class="sidebar-menu-link">
+                                <i class="fas fa-microchip"></i>
+                                <span>PCB Designing</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="iot.html" class="sidebar-menu-link">
+                                <i class="fas fa-wifi"></i>
+                                <span>IOT & Embedded System</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="java.html" class="sidebar-menu-link">
+                                <i class="fab fa-java"></i>
+                                <span>Java</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="cyber-security.html" class="sidebar-menu-link">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cyber Security</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="aiml.html" class="sidebar-menu-link">
+                                <i class="fas fa-brain"></i>
+                                <span>AIML</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="project.html" class="sidebar-menu-link">
+                                <i class="fas fa-rocket"></i>
+                                <span>Project</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <ul class="sidebar-menu">
+                    <li class="sidebar-menu-item">
+                        <a href="./Tanushri's Resume.pdf" download class="sidebar-menu-link">
+                            <i class="fas fa-download"></i>
+                            <span>Download Resume</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu-item">
+                        <a href="./index.html#contact" class="sidebar-menu-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact Me</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="content-section">
+                <div class="module-header">
+                    <a href="./index.html" class="back-link">
+                        <i class="fas fa-arrow-left"></i> Back to Home
+                    </a>
+                    <h1>Web Development</h1>
+                </div>
+                
+                <div class="module-content">
+                    <p class="lead">
+                        Web development is the foundation of modern digital experiences. In this module, I learned how to create responsive, accessible, and interactive websites using HTML, CSS, and JavaScript.
+                    </p>
+                    
+                    <h2>What I Learned</h2>
+                    
+                    <ul class="skill-list">
+                        <li>HTML5 semantic elements for better structure and accessibility</li>
+                        <li>CSS3 for styling, including Flexbox and Grid layouts</li>
+                        <li>JavaScript for interactivity and dynamic content</li>
+                        <li>Responsive design principles for mobile-first development</li>
+                    </ul>
+                    
+                    <h2>Projects</h2>
+                    
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <h3>Personal Portfolio</h3>
+                            <p>
+                                Created a responsive portfolio website showcasing my projects and skills using HTML, CSS, and JavaScript.
+                            </p>
+                            <a href="./index.html" class="btn btn-outline">View Project</a>
+                        </div>
+                        
+                        <div class="project-card">
+                            <h3>Web-Dev Module Documentation</h3>
+                            <p>
+                                Developed a responsive documentation webpage using my hands-onlearnings in Fab Lab class.
+                            </p>
+                            <a href="./WebDevModuleDocumentation.html" class="btn btn-outline">View Project</a>
+                        </div>
+                    </div>
+                    
+                    <h2>Key Takeaways</h2>
+                    
+                    <p>
+                        Web development is more than just writing code—it's about creating accessible, performant, and user-friendly experiences. Through this module, I've gained a deeper appreciation for the craft of web development and the importance of staying current with evolving standards and best practices.
+                    </p>
+                    
+                    <p>
+                        The skills I've acquired in this module have applications beyond just websites—they form the foundation for many other digital experiences, from mobile apps to interactive installations.
+                    </p>
+                    
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
